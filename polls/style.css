@@ -1,0 +1,16 @@
+li a {
+	color:green;
+}
+
+.container-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.text-end {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
