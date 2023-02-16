@@ -7,6 +7,35 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="{% url 'polls:comments'%}">
+            <img src="https://previews.dropbox.com/p/thumb/AB2fKOVRrqQIAX3Ws7PwgOFgZUxqcvJARlrGssT7geSR_n9Q5IUNFmP-QBBqLejuyNMihp6jEuboA0GMhLQj1S6EJxHLPmdFFtqDEPwmrnhB0JrdvURhHlvkppkTOSCHbRHS44C7ANIW-6ogzmG4oiubIxjhUVGGmJtwfhRipAYdRJL9tJgQZaEfw9xrhzgqUdni_TdLmHrLZMwSuXDNsvy_HoAUVMcCYH8kQw2l9KOTuVelejFmWy8qzXl4_ijHjR4HRdx11P49yCIFUITV79nKrV5VQX7aSberR2xr-omSYZoORMe4tK27Ghjk0gl6bah6Hw6GKX4C2vT-YR6PJ3Cvakwgq_N_kV76gk8E3R6PIXQB6t1tCIYoU9U7aYpexOg/p.png" style="width: 50px; height:55px;" class="image-responsive me-3">
+            MoFololo
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'polls:index'%}">Polls</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'polls:comments'%}">Comment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'polls:commentlist'%}">List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
 <div class="container-sm bg-warning my-4 p-1 text-start" style="border:4px groove #071797;border-radius: 5px;">
     <h4 class="fw-bold m-2" >Question {{question.id}}</h4>
     <form class="bg-white m-2 p-2" style="border-radius:5px"action="{% url 'polls:vote' question.id %}" method="post">
@@ -23,6 +52,22 @@
         </div>
     </form>
 </div>
+
+<footer class="bg-warning text-white p-3 fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 David</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline text-md-end">
+            <p>Published Date: Feb, 16, 2023
+            <p>Author: David Da Lian</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
